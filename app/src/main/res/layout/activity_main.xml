@@ -33,7 +33,7 @@
         android:clickable="true"
         android:onClick="startOtherActivity"
         android:src="@android:drawable/ic_dialog_email"
-        android:transitionName="transition_reveal_contact"
+        android:transitionName="@string/other_transition_name"
         tools:targetApi="lollipop"/>
 
 </android.support.design.widget.CoordinatorLayout>

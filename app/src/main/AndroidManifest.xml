@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".OtherActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar.Other"/>
     </application>
 
 </manifest>
