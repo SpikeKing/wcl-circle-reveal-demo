@@ -16,5 +16,5 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="动画显示: (1)角度滑动, (2)爆炸效果."/>
 </RelativeLayout>
