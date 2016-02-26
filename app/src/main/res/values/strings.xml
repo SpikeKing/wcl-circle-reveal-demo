@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">wcl-circle-reveal-demo</string>
     <string name="action_settings">Settings</string>
+    <string name="main_prompt">动画显示: (1)角度滑动 (2)爆炸效果</string>
     <string name="other_transition_name">transition_reveal</string>
+    <string name="other_text">广告\n(Advertisement)</string>
 </resources>

@@ -16,6 +16,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,7 +29,7 @@ import butterknife.ButterKnife;
 public class OtherActivity extends AppCompatActivity {
 
     @Bind(R.id.other_fab_circle) FloatingActionButton mFabCircle;
-    @Bind(R.id.other_v_container) View mVContainer;
+    @Bind(R.id.other_tv_container) TextView mTVContainer;
     @Bind(R.id.other_iv_close) ImageView mIvClose;
     @Bind(R.id.other_rl_container) RelativeLayout mRlContainer;
 
@@ -97,9 +98,9 @@ public class OtherActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).post(() -> {
             Animation animation = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
             animation.setDuration(300);
-            mVContainer.startAnimation(animation);
+            mTVContainer.startAnimation(animation);
             mIvClose.setAnimation(animation);
-            mVContainer.setVisibility(View.VISIBLE);
+            mTVContainer.setVisibility(View.VISIBLE);
             mIvClose.setVisibility(View.VISIBLE);
         });
     }

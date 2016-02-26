@@ -20,12 +20,18 @@
         app:pressedTranslationZ="8dp"
         tools:targetApi="21"/>
 
-    <View
-        android:id="@+id/other_v_container"
+    <TextView
+        android:id="@+id/other_tv_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorAccent"
-        android:visibility="invisible"/>
+        android:gravity="center"
+        android:text="@string/other_text"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
 
     <ImageView
         android:id="@+id/other_iv_close"
