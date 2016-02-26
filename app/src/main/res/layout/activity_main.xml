@@ -30,6 +30,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email"/>
+        android:clickable="true"
+        android:onClick="startOtherActivity"
+        android:src="@android:drawable/ic_dialog_email"
+        android:transitionName="transition_reveal_contact"
+        tools:targetApi="lollipop"/>
 
 </android.support.design.widget.CoordinatorLayout>
