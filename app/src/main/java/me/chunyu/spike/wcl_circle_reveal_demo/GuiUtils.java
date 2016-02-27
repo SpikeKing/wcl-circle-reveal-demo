@@ -54,7 +54,7 @@ public class GuiUtils {
         anim.start();
     }
 
-    // 圆圈退出效果
+    // 圆圈凝聚效果
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void animateRevealHide(
             final Context context, final View view,

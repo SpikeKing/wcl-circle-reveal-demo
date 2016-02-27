@@ -93,6 +93,14 @@ public class OtherActivity extends AppCompatActivity {
                 });
     }
 
+    // 退出动画
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void setupExitAnimation() {
+        Fade fade = new Fade();
+        getWindow().setReturnTransition(fade);
+        fade.setDuration(300);
+    }
+
     // 初始化视图
     private void initViews() {
         new Handler(Looper.getMainLooper()).post(() -> {
@@ -103,14 +111,6 @@ public class OtherActivity extends AppCompatActivity {
             mTVContainer.setVisibility(View.VISIBLE);
             mIvClose.setVisibility(View.VISIBLE);
         });
-    }
-
-    // 退出动画
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private void setupExitAnimation() {
-        Fade fade = new Fade();
-        getWindow().setReturnTransition(fade);
-        fade.setDuration(300);
     }
 
     // 退出按钮
