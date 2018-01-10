@@ -29,7 +29,7 @@ import butterknife.ButterKnife;
 public class OtherActivity extends AppCompatActivity {
 
     @Bind(R.id.other_fab_circle) FloatingActionButton mFabCircle;
-    @Bind(R.id.other_tv_container) TextView mTVContainer;
+    @Bind(R.id.other_tv_container) TextView mTvContainer;
     @Bind(R.id.other_iv_close) ImageView mIvClose;
     @Bind(R.id.other_rl_container) RelativeLayout mRlContainer;
 
@@ -51,7 +51,6 @@ public class OtherActivity extends AppCompatActivity {
     private void setupEnterAnimation() {
         Transition transition = TransitionInflater.from(this)
                 .inflateTransition(R.transition.arc_motion);
-        getWindow().setSharedElementEnterTransition(transition);
         transition.addListener(new Transition.TransitionListener() {
             @Override public void onTransitionStart(Transition transition) {
 
@@ -74,6 +73,7 @@ public class OtherActivity extends AppCompatActivity {
 
             }
         });
+        getWindow().setSharedElementEnterTransition(transition);
     }
 
     // 动画展示
@@ -97,8 +97,8 @@ public class OtherActivity extends AppCompatActivity {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void setupExitAnimation() {
         Fade fade = new Fade();
-        getWindow().setReturnTransition(fade);
         fade.setDuration(300);
+        getWindow().setReturnTransition(fade);
     }
 
     // 初始化视图
@@ -106,10 +106,11 @@ public class OtherActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).post(() -> {
             Animation animation = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
             animation.setDuration(300);
-            mTVContainer.startAnimation(animation);
-            mIvClose.setAnimation(animation);
-            mTVContainer.setVisibility(View.VISIBLE);
+
+            mTvContainer.setVisibility(View.VISIBLE);
             mIvClose.setVisibility(View.VISIBLE);
+            mTvContainer.startAnimation(animation);
+            mIvClose.setAnimation(animation);
         });
     }
 
